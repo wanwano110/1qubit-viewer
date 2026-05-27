@@ -38,7 +38,7 @@ export default function WaveDisplay({ state }: Props) {
 
   return (
     <div>
-      <svg width={WIDTH} height={HEIGHT} style={{ display: 'block' }}>
+      <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} width="100%" style={{ display: 'block' }}>
         {/* 中心軸 */}
         <line
           x1={PADDING.left} y1={MID_Y}
@@ -53,7 +53,7 @@ export default function WaveDisplay({ state }: Props) {
         <path d={alphaPath} fill="none" stroke="#4a90e2" strokeWidth={1.5} opacity={0.7} />
       </svg>
 
-      <div style={{ display: 'flex', gap: '1rem', marginTop: '4px', fontSize: '11px', fontFamily: 'monospace' }}>
+      <div className="wave-legend">
         <span style={{ color: '#4a90e2' }}>— alpha</span>
         <span style={{ color: '#e24a4a' }}>— beta</span>
       </div>

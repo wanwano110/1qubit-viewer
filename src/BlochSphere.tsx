@@ -27,7 +27,7 @@ export default function BlochSphere({ state }: Props) {
   const equatorRy = R * 0.3
 
   return (
-    <svg width={SIZE} height={SIZE} style={{ display: 'block' }}>
+    <svg viewBox={`0 0 ${SIZE} ${SIZE}`} width="100%" style={{ display: 'block', maxWidth: SIZE }}>
       {/* 球の外枠 */}
       <circle cx={CENTER} cy={CENTER} r={R} fill="none" stroke="#aaa" strokeWidth={1.5} />
 
